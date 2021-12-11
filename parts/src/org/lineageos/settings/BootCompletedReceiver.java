@@ -24,8 +24,11 @@ import android.content.IntentFilter;
 import android.os.IBinder;
 import android.view.Display.HdrCapabilities;
 import android.view.SurfaceControl;
+import android.content.SharedPreferences;
+import android.os.SystemProperties;
 import android.util.Log;
-
+import androidx.preference.PreferenceManager;
+import org.lineageos.settings.utils.FileUtils;
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
@@ -34,9 +37,12 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
     private static final boolean DEBUG = false;
     private static final String TAG = "XiaomiParts";
+    private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
+    private static final String DC_DIMMING_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/anti_flicker";
 
     @Override
     public void onReceive(final Context context, Intent intent) {
+    SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         if (DEBUG)
             Log.d(TAG, "Received boot completed intent");
         try {
@@ -52,5 +58,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         SurfaceControl.overrideHdrTypes(displayToken, new int[]{
                 HdrCapabilities.HDR_TYPE_DOLBY_VISION, HdrCapabilities.HDR_TYPE_HDR10,
                 HdrCapabilities.HDR_TYPE_HLG, HdrCapabilities.HDR_TYPE_HDR10_PLUS});
+
+        boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
+        FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "1" : "0"); 
+
     }
 }
