@@ -134,6 +134,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
+    
+# Charger
+PRODUCT_PACKAGES += \
+    product_charger_res_images \
+    product_charger_res_images_vendor
 
 # Camera
 PRODUCT_PACKAGES += \
