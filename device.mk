@@ -102,7 +102,10 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default
+    audio.bluetooth.default \
+    libldacBT_abr \
+    libldacBT_bco \
+    libldacBT_enc
 
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.a2dp@1.0-impl \
