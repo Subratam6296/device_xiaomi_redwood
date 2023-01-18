@@ -174,6 +174,7 @@ persist.sys.renderengine.backend=skiaglthreaded
 persist.sys.hwui.renderer=skiagl
 persist.sys.renderthread.skia.reduceopstasksplitting=true
 debug.mdpcomp.logs=0
+debug.sf.predict_hwc_composition_strategy=0
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
