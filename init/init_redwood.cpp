@@ -92,6 +92,7 @@ void vendor_load_properties() {
     // Set hardware revision
     property_override("ro.boot.hardware.revision", GetProperty("ro.boot.hwversion", "").c_str());
     
-    // Superior-Extended OS
-    property_override("ro.superior.cpu", "Snapdragon™ 778G");
+    // Rising OS
+    property_override("ro.rising.chipset", "Snapdragon™ 778G");
+    property_override("ro.rising.device", "POCO X5 Pro 5G");
 }
