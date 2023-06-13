@@ -225,6 +225,11 @@ vendor.gralloc.disable_ubwc=0
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
 
+
+# HWUI
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
+
 # Media
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
