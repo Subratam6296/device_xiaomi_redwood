@@ -11,6 +11,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from redwood device
 $(call inherit-product, device/xiaomi/redwood/device.mk)
 
+# Rising flags
+RISING_MAINTAINER := RDx55
+TARGET_ENABLE_BLUR := true
+WITH_GMS := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_BUILD_APERTURE_CAMERA := true
+
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
