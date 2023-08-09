@@ -27,6 +27,8 @@ import android.view.SurfaceControl;
 import android.content.SharedPreferences;
 import android.os.SystemProperties;
 import android.util.Log;
+
+import org.lineageos.settings.doze.DozeUtils;
 import androidx.preference.PreferenceManager;
 import org.lineageos.settings.utils.FileUtils;
 import org.lineageos.settings.dirac.DiracUtils;
@@ -52,6 +54,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         }
         ThermalUtils.startService(context);
         RefreshUtils.startService(context);
+        DozeUtils.checkDozeService(context);
 
         // Override HDR types
         final IBinder displayToken = SurfaceControl.getInternalDisplayToken();
