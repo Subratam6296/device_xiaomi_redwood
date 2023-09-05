@@ -159,6 +159,10 @@ ro.crypto.volume.metadata.method=dm-default-key
 # Dolby
 ro.vendor.audio.dolby.dax.support=true
 
+# Dolby Vision
+ro.vendor.audio.dolby.vision.support=true
+debug.config.media.video.dolby_vision_suports=true
+
 # DPM
 persist.vendor.dpm.feature=1
 persist.vendor.dpm.idletimer.mode=default
