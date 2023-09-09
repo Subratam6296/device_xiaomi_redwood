@@ -532,6 +532,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
     
+    <!-- A1 Belarus -->
+    <carrier_config mcc="257" mnc="01">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+    
+    <!-- MTS Belarus -->
+    <carrier_config mcc="257" mnc="02">
+        <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+    
     <!-- IDC Moldova -->
     <carrier_config mcc="259" mnc="15">
         <boolean name="carrier_vt_available_bool" value="true" />
