@@ -227,3 +227,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit proprietary blobs
 include vendor/xiaomi/redwood/BoardConfigVendor.mk
+
+# Firmware
+include vendor/xiaomi/redwood-firmware/config.mk
