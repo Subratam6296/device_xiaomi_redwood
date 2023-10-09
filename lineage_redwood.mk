@@ -15,6 +15,7 @@ $(call inherit-product, device/xiaomi/redwood/device.mk)
 RISING_MAINTAINER := RDx55
 TARGET_ENABLE_BLUR := true
 WITH_GMS := true
+TARGET_CORE_GMS := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_BUILD_APERTURE_CAMERA := true
