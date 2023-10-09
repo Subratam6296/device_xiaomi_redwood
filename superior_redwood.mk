@@ -15,6 +15,7 @@ $(call inherit-product, device/xiaomi/redwood/device.mk)
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_INCLUDE_PIXEL_CHARGER := true 
 BUILD_WITH_GAPPS := true
+TARGET_CORE_GMS := true
 USE_QUICKPIC := true
 USE_MOTO_CALCULATOR := true
 USE_DUCKDUCKGO := true
