@@ -31,7 +31,6 @@ import android.util.Log;
 import org.lineageos.settings.doze.DozeUtils;
 import androidx.preference.PreferenceManager;
 import org.lineageos.settings.utils.FileUtils;
-import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
 
@@ -47,11 +46,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         if (DEBUG)
             Log.d(TAG, "Received boot completed intent");
-        try {
-            DiracUtils.getInstance(context);
-        } catch (Exception e) {
-            Log.d(TAG, "Dirac is not present in system");
-        }
         ThermalUtils.startService(context);
         RefreshUtils.startService(context);
         DozeUtils.checkDozeService(context);
