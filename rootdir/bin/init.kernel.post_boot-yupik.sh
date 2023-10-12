@@ -349,7 +349,7 @@ do
 done
 
 # set s2idle as default suspend mode
-echo s2idle > /sys/power/mem_sleep
+echo deep > /sys/power/mem_sleep
 
 configure_memory_parameters
 
