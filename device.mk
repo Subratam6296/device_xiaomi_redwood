@@ -408,6 +408,7 @@ PRODUCT_PACKAGES += \
     Tag \
     NfcNci \
     SecureElement \
+    android.hardware.nfc@1.2-service
 
 PRODUCT_PACKAGES += \
     android.hardware.nfc_snxxx@1.2-service \
